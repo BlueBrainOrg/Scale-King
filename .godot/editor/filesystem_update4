@@ -1,6 +1,0 @@
-res://src/mountain.tscn
-res://assets/materials/mountain.tres
-res://src/climber.tscn
-res://src/anchor_point.tscn
-res://collision_polygon.tscn
-res://src/mountain.gd
