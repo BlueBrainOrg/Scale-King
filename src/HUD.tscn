@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://drnuea40v5brs"]
+
+[ext_resource type="Script" path="res://src/HUD.gd" id="1_i1egg"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_i1egg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+offset_right = 107.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Max Height:"
+
+[node name="MaxHeightValueLabel" type="Label" parent="Control/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -107.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Timer" type="Label" parent="Control/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00:00"
+horizontal_alignment = 2

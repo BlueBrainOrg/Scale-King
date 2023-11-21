@@ -1,0 +1,13 @@
+res://src/anchor_point.tscn::9d6ee8ccfd184e07e705aaa1c5d4e703::1700520931::res://.godot/exported/133200997/export-fc5e22901d3455d145fbad39f9b0196d-anchor_point.scn
+res://src/climber.tscn::cd39576fccc5d7b8824fa8c3e1c1a982::1700520931::res://.godot/exported/133200997/export-3c5c56459a7d7b175d88340a015827ec-climber.scn
+res://src/mountain.tscn::32d88d44607dcd3993012993c7c84a46::1700520931::res://.godot/exported/133200997/export-d8fae86ca3005872075c1ba211aa7856-mountain.scn
+res://src/start.tscn::2f72aa6b789451631c90d3f4555150bc::1700519511::res://.godot/exported/133200997/export-ea3bc42e3bf166aed957c72248c15519-start.scn
+res://src/paths/grid.tscn::99419e0a9784e9924ee5487aadc1a539::1700519511::res://.godot/exported/133200997/export-d4ac4fbf0ed6b4b840fe84b4ed4db76b-grid.scn
+res://src/paths/horizontal_1.tscn::e54ab5cedcdd70683a3333d61093e55e::1699990169::res://.godot/exported/133200997/export-1eadb380a13eae17ea27319097f5d5c9-horizontal_1.scn
+res://src/paths/row_1.tscn::fb752f26e3ec5f0199514da486350d16::1700334814::res://.godot/exported/133200997/export-fadd15e79e81508888f544f290ce6178-row_1.scn
+res://src/paths/vertical_1.tscn::126456fb11bb7d84e9261efc2610f766::1699990169::res://.godot/exported/133200997/export-c26d1f0b6f389278e361d63600ed3492-vertical_1.scn
+res://src/paths/zigzag_1.tscn::60f1ebaa89e7c8f1371aacd798d7836e::1699990169::res://.godot/exported/133200997/export-f834b30c05cc2d431f5f4b4179551bd4-zigzag_1.scn
+res://src/win.tscn::a493029d227a6199b9c1db8509fe21e5::1700519511::res://.godot/exported/133200997/export-de268a0de12a384b78375b5955cb2c5b-win.scn
+res://assets/materials/mountain.tres::7669d4d45c755a17c8f1676c35d041aa::1700517890::res://.godot/exported/133200997/export-fae236087e3f27dbe454bf52d1136650-mountain.res
+res://src/HUD.tscn::ef9ffdddb07f80f8ef9711bbf7f9d200::1700335641::res://.godot/exported/133200997/export-70557c7c9730905715d2acef8c678097-HUD.scn
+res://collision_polygon.tscn::9bfbb3c0d8e88ef8aa2a5ca770760ae9::1700520931::res://.godot/exported/133200997/export-764f19e8408cc803f38eb10677d4db6a-collision_polygon.scn

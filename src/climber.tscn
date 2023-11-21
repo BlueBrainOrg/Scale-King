@@ -1,0 +1,119 @@
+[gd_scene load_steps=13 format=3 uid="uid://bskf7tuecons6"]
+
+[ext_resource type="Script" path="res://src/climber.gd" id="1_jyv5a"]
+[ext_resource type="Script" path="res://src/player_arrow.gd" id="2_wbp0m"]
+[ext_resource type="Script" path="res://src/ClimberInput.gd" id="3_kpkd6"]
+[ext_resource type="Texture2D" uid="uid://bqd32xqeevx8s" path="res://assets/climber.png" id="4_sixya"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tn00"]
+bg_color = Color(0.388235, 0.670588, 0.513726, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q3hw"]
+atlas = ExtResource("4_sixya")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raovi"]
+atlas = ExtResource("4_sixya")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i0mr"]
+atlas = ExtResource("4_sixya")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akp74"]
+atlas = ExtResource("4_sixya")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pom1"]
+atlas = ExtResource("4_sixya")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kagcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8q3hw")
+}],
+"loop": true,
+"name": &"hanging",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raovi")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i0mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akp74")
+}],
+"loop": false,
+"name": &"miss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pom1")
+}],
+"loop": true,
+"name": &"standing",
+"speed": 0.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1lof"]
+radius = 6.0
+height = 22.0
+
+[node name="Climber" type="CharacterBody2D" groups=["climbers"]]
+floor_max_angle = 0.523599
+script = ExtResource("1_jyv5a")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.85098, 0.8, 0.737255, 1)
+polygon = PackedVector2Array(0, -9, -6, -6, -6, 6, 6, 6, 6, -6)
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(10, 0, 17, 0, 14, -3, 17, 0, 14, 3)
+width = 1.0
+script = ExtResource("2_wbp0m")
+
+[node name="InputManager" type="Node" parent="."]
+script = ExtResource("3_kpkd6")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -11.0
+offset_top = 11.0
+offset_right = 11.0
+offset_bottom = 17.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_1tn00")
+show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kagcn")
+animation = &"standing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h1lof")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-12, 0)
+
+[node name="RayCast2DRight" type="RayCast2D" parent="."]
+target_position = Vector2(12, 0)

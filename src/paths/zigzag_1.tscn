@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cebprv18w4q8p"]
+
+[ext_resource type="PackedScene" uid="uid://154gb554qou2" path="res://src/anchor_point.tscn" id="1_tf4w2"]
+
+[node name="zigzag_1" type="Node2D"]
+
+[node name="AnchorPoint" parent="." instance=ExtResource("1_tf4w2")]
+
+[node name="AnchorPoint2" parent="." instance=ExtResource("1_tf4w2")]
+position = Vector2(93, -161)
+
+[node name="AnchorPoint3" parent="." instance=ExtResource("1_tf4w2")]
+position = Vector2(0, -303)
+
+[node name="AnchorPoint4" parent="." instance=ExtResource("1_tf4w2")]
+position = Vector2(93, -454)
+
+[node name="AnchorPoint5" parent="." instance=ExtResource("1_tf4w2")]
+position = Vector2(0, -604)

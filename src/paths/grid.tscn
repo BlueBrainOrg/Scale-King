@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6sp5d6rvrp1v"]
+
+[ext_resource type="Script" path="res://src/paths/layout.gd" id="1_15v2q"]
+[ext_resource type="PackedScene" uid="uid://cvmiidkan3ol2" path="res://src/paths/row_1.tscn" id="1_a5ash"]
+
+[node name="horizontal 1" type="Node2D"]
+script = ExtResource("1_15v2q")
+difficulty = 2
+
+[node name="Row1" parent="." instance=ExtResource("1_a5ash")]
+difficulty = 2
+max_difficulty = 99
+
+[node name="Row2" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -50)
+difficulty = 2
+max_difficulty = 2
+
+[node name="Row3" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -100)
+difficulty = 2
+max_difficulty = 4
+
+[node name="Row4" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -150)
+difficulty = 2
+max_difficulty = 99
+
+[node name="Row5" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -200)
+difficulty = 2
+max_difficulty = 4
+
+[node name="Row6" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -250)
+difficulty = 2
+max_difficulty = 2
+
+[node name="Row7" parent="." instance=ExtResource("1_a5ash")]
+position = Vector2(0, -300)
+difficulty = 2
+max_difficulty = 99

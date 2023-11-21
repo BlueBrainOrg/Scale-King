@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://75g0anlssk26"]
+
+[sub_resource type="GDScript" id="GDScript_brnhm"]
+script/source = "extends Polygon2D
+@onready var collision_polygon_2d = $StaticBody2D/CollisionPolygon2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	collision_polygon_2d.polygon = self.polygon
+
+"
+
+[node name="Polygon2D" type="Polygon2D"]
+script = SubResource("GDScript_brnhm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
