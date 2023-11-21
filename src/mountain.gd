@@ -31,3 +31,8 @@ func hang(climber):
 #		climber.global_position = anchored_climbers[climber_id].global_position
 		return true
 	return false
+
+
+func _unhandled_key_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().reload_current_scene()

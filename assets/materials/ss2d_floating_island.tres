@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="SS2D_Material_Shape" load_steps=14 format=3 uid="uid://cbhfbicpqa3kr"]
+
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material.gd" id="1_13epk"]
+[ext_resource type="Texture2D" uid="uid://b4vmhem6wloby" path="res://assets/grass.png" id="2_pdiqx"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/normal_range.gd" id="3_pjat4"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" id="4_jyrcf"]
+[ext_resource type="Texture2D" uid="uid://c4t6p65ymim5t" path="res://assets/grass_fill1.png" id="5_00i1c"]
+[ext_resource type="Texture2D" uid="uid://dgywxisobtrfl" path="res://assets/grass_fill2.png" id="6_nqgw8"]
+[ext_resource type="Script" path="res://addons/rmsmartshape/materials/shape_material.gd" id="7_pu0uj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mo03q"]
+diffuse_texture = ExtResource("2_pdiqx")
+texture_repeat = 2
+
+[sub_resource type="Resource" id="Resource_mgtbt"]
+script = ExtResource("1_13epk")
+textures = Array[Texture2D]([SubResource("CanvasTexture_mo03q")])
+textures_corner_outer = Array[Texture2D]([])
+textures_corner_inner = Array[Texture2D]([])
+textures_taper_left = Array[Texture2D]([])
+textures_taper_right = Array[Texture2D]([])
+randomize_texture = false
+use_corner_texture = false
+use_taper_texture = true
+fit_mode = 0
+
+[sub_resource type="Resource" id="Resource_n20yo"]
+script = ExtResource("3_pjat4")
+begin = 60.0
+distance = 45.0
+edgeRendering = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_12jin"]
+script = ExtResource("4_jyrcf")
+edge_material = SubResource("Resource_mgtbt")
+normal_range = SubResource("Resource_n20yo")
+weld = true
+render = true
+z_index = 0
+z_as_relative = true
+offset = -0.8
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_h2hxd"]
+diffuse_texture = ExtResource("5_00i1c")
+texture_repeat = 2
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t6idr"]
+diffuse_texture = ExtResource("6_nqgw8")
+texture_repeat = 2
+
+[resource]
+script = ExtResource("7_pu0uj")
+_edge_meta_materials = Array[ExtResource("4_jyrcf")]([SubResource("Resource_12jin")])
+fill_textures = Array[Texture2D]([SubResource("CanvasTexture_h2hxd"), SubResource("CanvasTexture_t6idr")])
+fill_texture_z_index = 0
+fill_texture_show_behind_parent = true
+fill_mesh_offset = 0.0
+render_offset = 0.0
