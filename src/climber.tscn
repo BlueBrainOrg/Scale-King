@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bskf7tuecons6"]
+[gd_scene load_steps=14 format=3 uid="uid://bskf7tuecons6"]
 
 [ext_resource type="Script" path="res://src/climber.gd" id="1_jyv5a"]
 [ext_resource type="Script" path="res://src/player_arrow.gd" id="2_wbp0m"]
 [ext_resource type="Script" path="res://src/ClimberInput.gd" id="3_kpkd6"]
 [ext_resource type="Texture2D" uid="uid://bqd32xqeevx8s" path="res://assets/climber.png" id="4_sixya"]
+[ext_resource type="AudioStream" uid="uid://c7vmppklega4w" path="res://assets/sfx/Jump 1.wav" id="5_x5bwy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tn00"]
 bg_color = Color(0.388235, 0.670588, 0.513726, 1)
@@ -117,3 +118,7 @@ target_position = Vector2(-12, 0)
 
 [node name="RayCast2DRight" type="RayCast2D" parent="."]
 target_position = Vector2(12, 0)
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_x5bwy")

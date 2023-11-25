@@ -12,6 +12,7 @@ extends CharacterBody2D
 @onready var ray_left : RayCast2D = $RayCast2DLeft
 @onready var ray_right : RayCast2D = $RayCast2DRight
 @onready var collision_shape = $CollisionShape2D
+@onready var jump_sound = %JumpSound
 
 var was_on_wall = false
 
@@ -23,6 +24,7 @@ var jump_angle:= Vector2.UP
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animated_sprite_2d.play()
+
 
 func _process(delta):
 	animated_sprite_2d.rotation = jump_angle.angle() + deg_to_rad(90)
@@ -40,16 +42,18 @@ func _physics_process(delta):
 	self.move_and_slide()
 
 
-
 func _apply_gravity(delta):
 	self.velocity.y += terminal_velocity * gravity * delta
 	self.velocity.y = min(terminal_velocity, self.velocity.y)
 
+
 func jump():
 	var jump_force = max_jump_force * min(hanging_time / seconds_to_max_force, 1)
+	var tween = create_tween()
+	
 	self.hanging = false
 	self.velocity = jump_angle * jump_force
 	self.hanging_time = 0
-	var tween = create_tween()
-	animated_sprite_2d.animation = "jumping"
+	self.animated_sprite_2d.animation = "jumping"
+	self.jump_sound.play()
 	tween.tween_property(progress_bar, "value", 0, 0.1)
