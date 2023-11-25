@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://75g0anlssk26"]
+
+[ext_resource type="Script" path="res://src/collision_polygon.tres.gd" id="1_3v86m"]
+
+[node name="Polygon2D" type="Polygon2D"]
+script = ExtResource("1_3v86m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
