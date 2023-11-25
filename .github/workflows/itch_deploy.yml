@@ -5,7 +5,7 @@ on:
     types: [created, edited]
   
 jobs:
-  release_windows:
+  release_itch:
     runs-on: ubuntu-latest
     steps:
       - name: download web release
