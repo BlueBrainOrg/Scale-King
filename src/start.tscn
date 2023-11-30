@@ -237,7 +237,6 @@ position = Vector2(105, -13.5)
 texture = ExtResource("3_84xyf")
 
 [node name="climber" type="Sprite2D" parent="VBoxContainer/GridContainer/JumpInstructions5/Node2D/TurtlePos"]
-rotation = -0.682092
 texture = ExtResource("2_g0fgv")
 region_enabled = true
 region_rect = Rect2(0, 0, 24, 24)
