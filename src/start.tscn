@@ -136,7 +136,9 @@ position = Vector2(105, -1.5)
 [node name="HappyTurtle" parent="VBoxContainer/GridContainer/JumpInstructions/Node2D/TurtlePos" instance=ExtResource("1_ucqqd")]
 
 [node name="AnimatedSprite2D" parent="VBoxContainer/GridContainer/JumpInstructions/Node2D/TurtlePos/HappyTurtle" index="0"]
+position = Vector2(0, -11.367)
 sprite_frames = SubResource("SpriteFrames_kqo40")
+frame = 1
 
 [node name="AnimationPlayer" parent="VBoxContainer/GridContainer/JumpInstructions/Node2D/TurtlePos/HappyTurtle" index="1"]
 script = SubResource("GDScript_yudhm")
@@ -235,7 +237,7 @@ position = Vector2(105, -13.5)
 texture = ExtResource("3_84xyf")
 
 [node name="climber" type="Sprite2D" parent="VBoxContainer/GridContainer/JumpInstructions5/Node2D/TurtlePos"]
-rotation = 0.47895
+rotation = -0.682092
 texture = ExtResource("2_g0fgv")
 region_enabled = true
 region_rect = Rect2(0, 0, 24, 24)
@@ -252,7 +254,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/GridContainer/JumpInstructions5"]
 layout_mode = 2
-text = "You can change your jumping direction by pressing the using the left and right arrow keys!"
+text = "You can change your jumping direction by using the left and right arrow keys!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
